@@ -28,6 +28,17 @@
       <version>2.1</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-json</artifactId>
+      <version>1.13-b01</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -50,6 +61,20 @@
         <configuration>
           <failOnMissingWebXml>true</failOnMissingWebXml>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.zeroturnaround</groupId>
+        <artifactId>jrebel-maven-plugin</artifactId>
+        <version>1.1.1</version>
+        <executions>
+          <execution>
+            <id>generate-rebel-xml</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <!-- 
       <plugin>

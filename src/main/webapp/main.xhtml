@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  template="templates/commonLayout.xhtml"
+  xmlns:a="http://java.sun.com/jsf/composite/components">
+
+  <ui:param name="headline" value="#{msg.main_page_title}" />
+  <ui:param name="backlink" value="index.xhtml" />
+  
+  <ui:define name="content">
+    
+    <table>
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>desc</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		// get tasks
+    		$.getJSON("data/task/all", 'callback=?', function(data) {
+    			$.each(data, function(key, val) {
+    				console.log(key);
+    			});
+    		});
+    	});
+    </script>
+    
+  </ui:define>
+  
+</ui:composition>

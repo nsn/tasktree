@@ -4,4 +4,16 @@
     xmlns="http://java.sun.com/xml/ns/javaee"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd" >
 
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <!-- <supported-locale>fr</supported-locale>-->
+            <!-- <supported-locale>de</supported-locale>-->
+        </locale-config>
+        <resource-bundle>
+            <base-name>com.nightspawn.tasktree.Messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
+
 </faces-config>
