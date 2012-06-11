@@ -11,7 +11,7 @@
   
   <ui:define name="content">
     
-    <table>
+    <table id="tasktable">
       <thead>
         <tr>
           <th class="titlecol">title</th>
@@ -21,8 +21,8 @@
       <tbody>
         <ui:repeat value="#{mainController.getAllTasks()}" var="task">
           <tr>
-            <th class="titlecol">#{task.title.title}</th>
-            <th>#{task.description.description}</th>
+            <td class="titlecol">#{task.title.title}</td>
+            <td>#{task.description.description}</td>
           </tr>
         </ui:repeat>
       </tbody>

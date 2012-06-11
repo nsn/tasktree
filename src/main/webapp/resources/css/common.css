@@ -1,0 +1,18 @@
+
+#tasktable {
+	background-color: #fff;
+	border-collapse: collapse;
+}
+
+#tasktable thead tr {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+#tasktable thead tr th {
+	border: 1px solid black;
+}
+
+#tasktable tbody tr td {
+	border: 1px solid black;
+}

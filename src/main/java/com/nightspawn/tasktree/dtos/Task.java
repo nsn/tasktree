@@ -9,9 +9,13 @@ public class Task implements Comparable<Task> {
 	private Task parent;
 
 	public Task(Title title, Description desc) {
+		this(title, desc, TaskId.randomTaskId());
+	}
+
+	public Task(Title title, Description desc, TaskId id) {
 		setTitle(title);
 		setDescription(desc);
-		setId(TaskId.randomTaskId());
+		setId(id);
 	}
 
 	@Override
