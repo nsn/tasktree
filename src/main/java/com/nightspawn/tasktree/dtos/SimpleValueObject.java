@@ -30,13 +30,11 @@ public abstract class SimpleValueObject<T extends Comparable<T>> implements
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("SimpleValueObject: ");
 		if (value == null) {
-			sb.append("null");
+			return "null";
 		} else {
-			sb.append(value.toString());
+			return value.toString();
 		}
-		return sb.toString();
 	}
 
 	@Override

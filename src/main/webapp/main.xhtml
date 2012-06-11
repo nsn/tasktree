@@ -20,9 +20,9 @@
       </thead>
       <tbody>
         <ui:repeat value="#{mainController.getAllTasks()}" var="task">
-          <tr>
-            <td class="titlecol">#{task.title.title}</td>
-            <td>#{task.description.description}</td>
+          <tr id="#{mainController.getNodeId(task)}" class="#{mainController.getChildOfClass(task)}">
+            <td class="titlecol">#{task.title}</td>
+            <td>#{task.description}</td>
           </tr>
         </ui:repeat>
       </tbody>
@@ -30,6 +30,8 @@
     
     <script type="text/javascript">
     	$(document).ready(function() {
+            $("#tasktable").treeTable({
+            });          
     		// get tasks
     		$.getJSON("data/task/all", 'callback=?', function(data) {
     			$.each(data, function(key, val) {
