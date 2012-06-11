@@ -28,7 +28,6 @@ public class TaskListResource {
 	// @Path("/all")
 	public List<Task> getAllTasks() {
 		List<Task> allTasks = finder.getAllTasks();
-		Collections.sort(allTasks);
 		return allTasks;
 	}
 
@@ -36,7 +35,6 @@ public class TaskListResource {
 	@Path("/all")
 	public JSONWithPadding getAllTasks(
 			@QueryParam("callback") @DefaultValue("fn") String callback) {
-		System.out.println("penis " + callback);
 		List<Task> allTasks = getAllTasks();
 		return new JSONWithPadding(allTasks, callback);
 	}

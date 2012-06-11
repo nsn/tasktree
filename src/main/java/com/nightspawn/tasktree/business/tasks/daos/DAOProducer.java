@@ -11,7 +11,6 @@ public class DAOProducer {
 
 	@Produces
 	public FindTasksDAO makeFindTasksDAO() {
-		System.out.println("ficken ");
 		return findTasksDAOMockup;
 	}
 

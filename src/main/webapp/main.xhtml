@@ -14,11 +14,17 @@
     <table>
       <thead>
         <tr>
-          <th>title</th>
-          <th>desc</th>
+          <th class="titlecol">title</th>
+          <th class="desccol">desc</th>
         </tr>
       </thead>
       <tbody>
+        <ui:repeat value="#{mainController.getAllTasks()}" var="task">
+          <tr>
+            <th class="titlecol">#{task.title.title}</th>
+            <th>#{task.description.description}</th>
+          </tr>
+        </ui:repeat>
       </tbody>
     </table>
     
@@ -27,7 +33,7 @@
     		// get tasks
     		$.getJSON("data/task/all", 'callback=?', function(data) {
     			$.each(data, function(key, val) {
-    				console.log(key);
+    				console.log(val.title);
     			});
     		});
     	});

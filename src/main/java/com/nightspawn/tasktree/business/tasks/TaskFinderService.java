@@ -1,5 +1,6 @@
 package com.nightspawn.tasktree.business.tasks;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -12,6 +13,8 @@ public class TaskFinderService {
 	FindTasksDAO dao;
 
 	public List<Task> getAllTasks() {
-		return dao.getAllTasks();
+		List<Task> tasks = dao.getAllTasks();
+		Collections.sort(tasks);
+		return tasks;
 	}
 }
