@@ -1,7 +1,8 @@
 
 #tasktable {
 	background-color: #fff;
-	border-collapse: collapse; 
+	border-collapse: collapse;
+	width: 100%; 
 }
 
 #tasktable thead tr {
